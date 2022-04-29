@@ -1,0 +1,176 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "eth_getBlockByNumber",
+    "description": "Returns information about a block by block number.",
+    "version": "0.1"
+  },
+  "servers": [
+    {
+      "url": "https://eth-mainnet.alchemyapi.io"
+    }
+  ],
+  "tags": [
+    {
+      "name": "eth_getBlockByNumber",
+      "description": "not sure what to put here"
+    }
+  ],
+  "paths": {
+    "/v2/demo": {
+      "post": {
+        "tags": [
+          "eth_getBlockByNumber"
+        ],
+        "description": "Auto generated using Swagger Inspector",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/v2_demo_body"
+              },
+              "examples": {
+                "0": {
+                  "value": "{\n    \"jsonrpc\":\"2.0\",\n    \"method\":\"eth_getBlockByNumber\",\n    \"params\":[\"0x1b4\", true],\n    \"id\":0\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200"
+                },
+                "examples": {
+                  "0": {
+                    "value": "{\"jsonrpc\":\"2.0\",\"id\":0,\"result\":{\"number\":\"0x1b4\",\"difficulty\":\"0x4ea3f27bc\",\"extraData\":\"0x476574682f4c5649562f76312e302e302f6c696e75782f676f312e342e32\",\"gasLimit\":\"0x1388\",\"gasUsed\":\"0x0\",\"hash\":\"0xdc0818cf78f21a8e70579cb46a43643f78291264dda342ae31049421c82d21ae\",\"logsBloom\":\"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000\",\"miner\":\"0xbb7b8287f3f0a933474a79eae42cbca977791171\",\"mixHash\":\"0x4fffe9ae21f1c9e15207b1f472d5bbdd68c9595d461666602f2be20daf5e7843\",\"nonce\":\"0x689056015818adbe\",\"parentHash\":\"0xe99e022112df268087ea7eafaf4790497fd21dbeeb6bd7a1721df161a6657a54\",\"receiptsRoot\":\"0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421\",\"sha3Uncles\":\"0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347\",\"size\":\"0x220\",\"stateRoot\":\"0xddc8b0234c2e0cad087c8b389aa7ef01f7d79b2570bccb77ce48648aa61c904d\",\"timestamp\":\"0x55ba467c\",\"totalDifficulty\":\"0x78ed983323d\",\"transactions\":[],\"transactionsRoot\":\"0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421\",\"uncles\":[]}}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://eth-mainnet.alchemyapi.io"
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "https://eth-mainnet.alchemyapi.io"
+        }
+      ]
+    }
+  },
+  "components": {
+    "schemas": {
+      "v2_demo_body": {
+        "type": "object",
+        "properties": {
+          "method": {
+            "type": "string"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "jsonrpc": {
+            "type": "string"
+          },
+          "params": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "inline_response_200": {
+        "type": "object",
+        "properties": {
+          "result": {
+            "type": "object",
+            "properties": {
+              "logsBloom": {
+                "type": "string"
+              },
+              "totalDifficulty": {
+                "type": "string"
+              },
+              "receiptsRoot": {
+                "type": "string"
+              },
+              "extraData": {
+                "type": "string"
+              },
+              "transactions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "nonce": {
+                "type": "string"
+              },
+              "miner": {
+                "type": "string"
+              },
+              "difficulty": {
+                "type": "string"
+              },
+              "number": {
+                "type": "string"
+              },
+              "gasLimit": {
+                "type": "string"
+              },
+              "gasUsed": {
+                "type": "string"
+              },
+              "uncles": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "sha3Uncles": {
+                "type": "string"
+              },
+              "size": {
+                "type": "string"
+              },
+              "transactionsRoot": {
+                "type": "string"
+              },
+              "stateRoot": {
+                "type": "string"
+              },
+              "mixHash": {
+                "type": "string"
+              },
+              "parentHash": {
+                "type": "string"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "timestamp": {
+                "type": "string"
+              }
+            }
+          },
+          "id": {
+            "type": "integer"
+          },
+          "jsonrpc": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
