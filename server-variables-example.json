@@ -1,0 +1,72 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+      "title": "Server variables",
+      "description": "https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#serverVariableObject",
+      "version": "1.0.0"
+    },
+    "servers": [
+      {
+        "url": "https://eth-mainnet.alchemyapi.io//v2/{apiKey}",
+        "variables": {
+          "apiKey": {
+            "default": "demo"
+          }
+        }
+      }
+    ],
+    "paths": {
+      "/eth_getBlockByNUmber": {
+        "post": {
+          "summary": "eth_getBlockByNumber",
+          "description": "Auto generated using Swagger Inspector",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                    "$ref": "#/components/schemas/v2_demo_body"
+                  }
+                },
+                "examples": {
+                  "0": {
+                    "value": "{\n    \"jsonrpc\":\"2.0\",\n    \"method\":\"eth_getBlockByNumber\",\n    \"params\":[\"0x1b4\", true],\n    \"id\":0\n}"
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        }
+      },
+    "components": {
+        "schemas": {
+          "eth_getBlockByNumber_body": {
+            "type": "object",
+            "properties": {
+              "method": {
+                "schema": {
+                    "type": "string",
+                    "enum": ["eth_getBlockByNumber"]
+                }
+              },
+              "id": {
+                "type": "integer"
+              },
+              "jsonrpc": {
+                "type": "string"
+              },
+              "params": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+    }
+  }
