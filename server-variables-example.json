@@ -24,7 +24,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                    "$ref": "#/components/schemas/v2_demo_body"
+                    "$ref": "#/components/schemas/eth_getBlockByNumber_body"
                   }
                 },
                 "examples": {
